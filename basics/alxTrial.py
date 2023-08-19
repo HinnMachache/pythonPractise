@@ -73,6 +73,7 @@ else:
 # Complete with 10 or less lines
 
 # Input age
+'''
 age = eval(input("Input age: "))
 # Conditions
 if age < 5:
@@ -84,4 +85,6 @@ elif 6 <= age <= 17:
     print(f"Go to grade {grade:d}")
 else:
     print("Go to college")
+'''
+
 
