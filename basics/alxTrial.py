@@ -67,7 +67,7 @@ else:
     print("Enter a valid operator")
 '''
 
-# if age is 5, Go to Kingergaten
+# if age is 5, Go to Kindergaten
 # Ages 6 through 17 goes to grades 1 through 12
 # if age is greater than 17 say go to college
 # Complete with 10 or less lines
@@ -85,6 +85,23 @@ elif 6 <= age <= 17:
     print(f"Go to grade {grade:d}")
 else:
     print("Go to college")
+
+for num in range(20):
+    if (num % 2 == 1):
+        print(f"Odd is {num}")
 '''
 
-
+# Calculate interest in 10 years
+# Input Principal
+principal = input("Input Principal: ")
+principal = float(principal)
+# Input time
+period = eval(input("Input number of years: "))
+# Input rate
+rate = input("Input rate: ")
+# Convert Years
+rate = float(rate) * 0.01
+# Calculate Total Amount
+for year in range(period):
+    principal = principal + (principal * rate)
+print(f"Total amount = {principal:.2f}")
