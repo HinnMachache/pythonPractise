@@ -11,5 +11,5 @@ print(str1.format(5,"example"))
 # Str Methods
 name = input("What is your name? ")
 # Remove whitespace and Capitalize
-name = name.strip().title()g
+name = name.strip().title()
 print(name)
