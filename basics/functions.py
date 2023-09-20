@@ -51,7 +51,7 @@ print(fibonacci(3))
 
 x = 20  # Global Variable
 
-
+'''
 def outerFunc():
     global x
     x = 30  # Variable shadowing
@@ -71,3 +71,55 @@ def outerFunc():
 
 outerFunc()
 print(x)
+
+'''
+
+
+# Defining a function with a variable number of arguments
+
+def ask_ok(prompt, retries=4, reminder="Please try again!"):
+    while True:
+        ok = input(prompt)
+        ok = ok.lower()
+        if ok in ('y', 'ye', 'yes'):
+            print("We're glad!")
+            return True
+        if ok in ('n', 'no', 'nop', 'nope'):
+            print("Ooops! We're working on it.")
+            return False
+        retries -= 1
+        if retries <= 0:
+            raise ValueError("invalid user response!")
+        print(reminder)
+
+
+# ask_ok("Are you okay? ", reminder="Come on Think", retries=5)
+
+def input_pin(prompt, retries=3, reminder="Incorrect pin"):
+    while True:
+        pin = int(input(prompt))
+        if pin == 2022:
+            return True
+        retries -= 1
+        if retries <= 0:
+            raise ValueError("Pin Blocked. Input PUK")
+        print(reminder)
+
+
+# input_pin("Input sim pin: ")
+
+
+def parrot(voltage, state="stiff", action="Voom", type="Norwegian Blue"):
+    print("-- This parrot wouldn't", action, end=" ")   # Keyword argument to print()
+    print("if you put", voltage, "volts through it.")
+    print("-- Lovely plumage, the", type)
+    print("-- It's", state, "!")
+    print()
+
+
+parrot(1000)
+parrot(voltage=1000)    # Keyword Arguments
+parrot(voltage=10000, action="VOOOOOM") # 2 Keyword Arguments
+parrot(action="VOOOOM", voltage=10000)  # 2 Keyword Arguments
+parrot("a million", "bereft of life", "jump")   # 3 Positional Arguments
+parrot("a thousand", state="Pushing up the daises") # 1 Positional Argument and 1 Keyword Argument
