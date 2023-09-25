@@ -1,5 +1,6 @@
 import math
 
+
 def hello(name="World"):
     print(f"Hello {name}")
 
@@ -240,4 +241,12 @@ def main():
     get_area(shape_type)
 
 
-main()
+# main()
+'''for meow in range(3):
+    print("Meow!")
+'''
+
+while True:
+    num = int(input("Enter a number: "))
+    if num > 0:
+        break
